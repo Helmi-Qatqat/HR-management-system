@@ -23,21 +23,71 @@
       </div>
     </header>
     <main>
-      <section>
+      <section class="employeesCards">
         <div class="container">
-          <h2>Employees</h2>
-          <table>
-            <thead>
-              <th>Employee ID</th>
-              <th>Full Name</th>
-              <th>Department</th>
-              <th>Level</th>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <script src="app.js"></script>
+          <div class="headerText">
+            <h2>Employees</h2>
+          </div>
+          <section class="administration">
+            <h3>Administration Department</h3>
+            <div class="emp-container">
+
+            </div>
+          </section>
+          <section class="marketing">
+            <h3>Marketing Department</h3>
+            <div class="emp-container">
+
+            </div>
+          </section>
+          <section class="development">
+            <h3>Development Department</h3>
+            <div class="emp-container">
+
+            </div>
+          </section>
+          <section class="finance">
+            <h3>Finance Department</h3>
+            <div class="emp-container">
+
+            </div>
+          </section>
         </div>
       </section>
+      <section>
+        <div class="container">
+          <form action="">
+            <h2>New Employee</h2>
+            <div>
+              <label for="name">Full Name</label>
+              <input type="name" placeholder="Enter Full Name" />
+            </div>
+            <div>
+              <label for="department">Department</label>
+              <select name="department" id="department">
+                <option value="administration">Administration</option>
+                <option value="marketing">Marketing</option>
+                <option value="development">Development</option>
+                <option value="finance">Finance</option>
+              </select>
+            </div>
+            <div>
+              <label for="level">Level</label>
+              <select name="level" id="">
+                <option value="junior">Junior</option>
+                <option value="mid-senior">Mid-Senior</option>
+                <option value="senior">Senior</option>
+              </select>
+            </div>
+            <div>
+              <label for="text">Image URL</label>
+              <input type="text" placeholder="Put your Image URL" />
+            </div>
+            <input type="button" value="Submit" />
+          </form>
+        </section>
+        </div>
+        <script src="app.js"></script>
     </main>
     <footer>
       <div>Helmi Copyright &copy; 2023</div>
