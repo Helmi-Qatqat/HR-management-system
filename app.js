@@ -55,7 +55,6 @@ submitBtn.addEventListener("click", function (event) {
   let empInfo = `Name: ${name} - ID: ${id} Department: ${department} - Level: ${level} - Salary: ${calcSalary(
     level
   )}`;
-  console.log(document.querySelector("section.administration .emp-container"));
   myCard.appendChild(empImg, empInfoContainer);
   empInfoContainer.textContent = empInfo;
   empInfoContainer.style.cssText = "color: black; text-align: center";
