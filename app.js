@@ -28,7 +28,27 @@ function Employee(id, fullName, department, level, img, salary) {
   this["Image URL"] = img;
   this.salary = calcSalary(this.Level);
   EmployeesArray.push(this);
+  Renderer(this["Employee ID"], this["Full Name"], this.Department, this.Level);
 }
+let Renderer = function (id, fullName, department, level) {
+  let myTable = document.querySelector("tbody");
+  let myRow = document.createElement("tr");
+  myTable.appendChild(myRow);
+  for (let i of arguments) {
+    let myCell = document.createElement("td");
+    let myContent = document.createTextNode(i);
+    myCell.appendChild(myContent);
+    myRow.appendChild(myCell);
+  }
+  return myTable;
+}
+new Employee(1000, "Ghazi Samer", "Administration", "Senior");
+new Employee(1001, "Lana Ali", "Finance", "Senior");
+new Employee(1002, "Tamara Ayoub", "Marketing", "Senior");
+new Employee(1003, "Safi Walid", "Administration", "Mid-Senior");
+new Employee(1004, "Omar Zaid", "Development", "Senior");
+new Employee(1005, "Rana Saleh", "Development", "Junior");
+new Employee(1006, "Hadi Ahmad", "Finance", "Mid-Senior");
 
 let submitBtn = document.querySelector('[type="button"]');
 submitBtn.addEventListener("click", function (event) {
